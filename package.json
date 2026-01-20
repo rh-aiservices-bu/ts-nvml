@@ -1,0 +1,70 @@
+{
+  "name": "@rh-ai-bu/ts-nvml",
+  "version": "0.1.0",
+  "description": "TypeScript bindings for NVIDIA Management Library (NVML)",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./bindings": {
+      "types": "./dist/bindings/index.d.ts",
+      "import": "./dist/bindings/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:unit": "vitest run test/unit",
+    "test:integration": "vitest run test/integration",
+    "lint": "eslint src test",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "os": [
+    "linux"
+  ],
+  "cpu": [
+    "x64",
+    "arm64"
+  ],
+  "dependencies": {
+    "koffi": "^2.15.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.2",
+    "@types/node": "^22.0.0",
+    "eslint": "^9.0.0",
+    "typescript": "^5.7.0",
+    "typescript-eslint": "^8.53.1",
+    "vitest": "^3.0.0"
+  },
+  "keywords": [
+    "nvidia",
+    "nvml",
+    "gpu",
+    "monitoring",
+    "ffi",
+    "typescript",
+    "cuda"
+  ],
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rh-aiservices-bu/ts-nvml.git"
+  },
+  "author": "Red Hat AI Services BU"
+}
