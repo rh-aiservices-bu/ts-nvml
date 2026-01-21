@@ -27,7 +27,7 @@ For complete API documentation with all functions, types, enums, and examples, s
 ## Installation
 
 ```bash
-npm install ts-nvml
+npm install @rh-ai-bu/ts-nvml
 ```
 
 ## Quick Start
